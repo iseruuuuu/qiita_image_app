@@ -23,11 +23,11 @@ class ImageEditorScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.yellow,
+        backgroundColor: const Color(0xFF4ABE03),
         elevation: 0,
         leading: IconButton(
-          color: Colors.black,
-          iconSize: 30,
+          color: Colors.white,
+          iconSize: 25,
           icon: const Icon(Icons.arrow_back_ios),
           onPressed: () => Navigator.pop(context),
         ),
@@ -42,7 +42,6 @@ class ImageEditorScreen extends StatelessWidget {
                 Image.asset(
                   'assets/images/qiita.png',
                   width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height / 3,
                   fit: BoxFit.contain,
                 ),
                 Obx(
@@ -52,7 +51,7 @@ class ImageEditorScreen extends StatelessWidget {
                     ),
                     child: SizedBox(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height / 3,
+                      height: MediaQuery.of(context).size.height / 4,
                       child: Column(
                         children: [
                           const Spacer(),
@@ -84,7 +83,7 @@ class ImageEditorScreen extends StatelessWidget {
               ),
             ),
           ),
-          const Spacer(),
+          const SizedBox(height: 15),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -95,7 +94,6 @@ class ImageEditorScreen extends StatelessWidget {
                   '文字の大きさ',
                   style: TextStyle(
                     fontSize: 20,
-                    fontWeight: FontWeight.bold,
                     color: Colors.black,
                   ),
                 ),
@@ -121,7 +119,6 @@ class ImageEditorScreen extends StatelessWidget {
               const Spacer(flex: 2),
             ],
           ),
-          const SizedBox(height: 30),
           Row(
             children: [
               const Spacer(flex: 2),
@@ -131,7 +128,6 @@ class ImageEditorScreen extends StatelessWidget {
                   'Textの位置',
                   style: TextStyle(
                     fontSize: 20,
-                    fontWeight: FontWeight.bold,
                     color: Colors.black,
                   ),
                 ),
@@ -161,15 +157,15 @@ class ImageEditorScreen extends StatelessWidget {
           AppButton(
             onTap: controller.storeImage,
             title: '保存する',
-            buttonColor: Colors.yellow,
-            titleColor: Colors.black,
+            buttonColor: const Color(0xFF4ABE03),
+            titleColor: Colors.white,
           ),
-          const SizedBox(height: 30),
+          const SizedBox(height: 50),
           AppButton(
             onTap: controller.shareImage,
             title: '共有する',
-            buttonColor: Colors.black,
-            titleColor: Colors.yellow,
+            buttonColor: Colors.white,
+            titleColor: const Color(0xFF4ABE03),
           ),
           const Spacer(),
         ],
