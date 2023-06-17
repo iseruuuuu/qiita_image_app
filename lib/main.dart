@@ -5,8 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
 
+import 'screen/image_create/image_create_screen.dart';
+
 // Project imports:
-import 'screen/title/image_create_screen.dart';
 
 void main() {
   runApp(const MyApp());
