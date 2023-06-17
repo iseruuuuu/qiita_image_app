@@ -20,6 +20,14 @@ class ImageCreateScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: const Color(0xFF4ABE03),
         elevation: 0,
+        title: const Text(
+          'Qiitaタイトルメーカー',
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+        ),
       ),
       body: GestureDetector(
         onTap: () {
@@ -30,26 +38,32 @@ class ImageCreateScreen extends StatelessWidget {
             children: [
               const SizedBox(height: 20),
               const Text(
-                'Qiitaのタイトル',
+                '使い方(簡単２ステップ)',
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
                 ),
               ),
-              const Text(
-                '説明\n'
-                'あああ',
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.black,
+              const Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 10,
+                  vertical: 20,
+                ),
+                child: Text(
+                  '①  Qiitaのタイトルを入力します。\n'
+                  '②「生成する」をタップします。',
+                  textAlign: TextAlign.start,
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.black,
+                  ),
                 ),
               ),
               const Spacer(),
               Padding(
                 padding: const EdgeInsets.symmetric(
-                  horizontal: 10,
-                  vertical: 10,
+                  horizontal: 20,
                 ),
                 child: TextField(
                   onChanged: controller.onTitleChanged,
@@ -75,12 +89,14 @@ class ImageCreateScreen extends StatelessWidget {
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
                       borderSide: const BorderSide(
-                        color: Colors.black,
+                        width: 2,
+                        color: Color(0xFF4ABE03),
                       ),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
                       borderSide: const BorderSide(
+                        width: 2,
                         color: Colors.blue,
                       ),
                     ),
